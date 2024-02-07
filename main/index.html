@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Clone </title>
+    <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="./src/broserAppearances.css">
+    <script src="https://kit.fontawesome.com/ef961f7c58.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="w-screen h-screen bg-black flex flex-col">
+        <div class="w-screen bg-black h-[85%] flex ">
+            <!--Side Bar Starts-->
+            <div class="w-80 h-[98%] my-2 mx-2  bg-black flex flex-col ">
+                <!--Home and Search Button starts-->
+                <div class="w-72 bg-[#121212]  h-32 rounded-xl flex flex-col justify-center items-center">
+                    <div class="homeBtn group w-60 h-10 my-2 flex items-center hover:cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="35" height="35" id="house">
+                            <rect width="40" height="40" fill="none"></rect>
+                            <path class="homePath group-hover:stroke-white group-hover:fill-white" fill="white"
+                                stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="20"
+                                d="M151.99414,207.99263v-48.001a8,8,0,0,0-8-8h-32a8,8,0,0,0-8,8v48.001a8,8,0,0,1-7.999,8l-47.99414.00632a8,8,0,0,1-8.001-8v-92.4604a8,8,0,0,1,2.61811-5.91906l79.9945-72.73477a8,8,0,0,1,10.76339-.00036l80.0055,72.73509A8,8,0,0,1,216,115.53887V207.999a8,8,0,0,1-8.001,8l-48.00586-.00632A8,8,0,0,1,151.99414,207.99263Z">
+                            </path>
+                        </svg>
+                        <p class="homeP text-white ml-5 group-hover:text-white font-semibold text-xl select-none">Home
+                        </p>
+                    </div>
+                    <div class="searchBtn group w-60 h-10 my-2 flex items-center hover:cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101 101" width="35" height="35"
+                            id="search">
+                            <path class="searchPath group-hover:stroke-white" fill="gray" stroke="gray"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                d="M63.3 59.9c3.8-4.6 6.2-10.5 6.2-17 0-14.6-11.9-26.5-26.5-26.5S16.5 28.3 16.5 42.9 28.4 69.4 43 69.4c6.4 0 12.4-2.3 17-6.2l20.6 20.6c.5.5 1.1.7 1.7.7.6 0 1.2-.2 1.7-.7.9-.9.9-2.5 0-3.4L63.3 59.9zm-20.4 4.7c-12 0-21.7-9.7-21.7-21.7s9.7-21.7 21.7-21.7 21.7 9.7 21.7 21.7-9.7 21.7-21.7 21.7z">
+                            </path>
+                        </svg>
+                        <p class="searchP text-gray-600 ml-5 group-hover:text-white font-semibold text-xl select-none">
+                            Search
+                        </p>
+                    </div>
+                </div>
+                <!--Home and Search Button Ends-->
+
+                <!--library starts-->
+                <div class="w-72 rounded-xl h-auto bg-[#121212] my-2 mt-3 mb-0 flex flx-col flex-wrap">
+                    <!--Library Button Starts-->
+                    <div class="h-11 w-64 mx-auto my-2 flex justify-between items-center">
+                        <button class="group p-2 flex justify-center items-center hover:text-white">
+                            <svg class="group-hover:fill-white" fill="gray" height="30px" width="30px" version="1.1"
+                                id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve">
+                                <g>
+                                    <g>
+                                        <g>
+                                            <path d="M464.107,117.333h-19.646c-9.132-30.207-34.599-64-60.461-64h-97.83l-36.418-36.418
+				                            c-4.001-4.001-9.427-6.248-15.085-6.248H69.461c-26.375,0-48.128,20.784-48.128,46.933v67.796C8.472,134.008,0,148.688,0,165.333
+				                            v288c0,26.482,21.435,48,47.893,48h416.213c26.458,0,47.893-21.518,47.893-48v-288C512,138.852,490.565,117.333,464.107,117.333z
+				                             M64,57.6c0-2.139,2.227-4.267,5.461-4.267H225.83l36.418,36.418c4.001,4.001,9.427,6.248,15.085,6.248H384
+				                            c-0.854,0,4.813,5.208,10.449,14.585c1.321,2.198,2.56,4.475,3.694,6.749H64V57.6z M469.333,453.333
+				                            c0,2.955-2.37,5.333-5.227,5.333H47.893c-2.857,0-5.227-2.379-5.227-5.333v-288c0-2.955,2.37-5.333,5.227-5.333h378.773h37.44
+				                            c2.857,0,5.227,2.379,5.227,5.333V453.333z" />
+                                            <path d="M405.232,200.656c-0.01-0.109-0.021-0.219-0.033-0.328c-0.011-0.103-0.018-0.205-0.031-0.308
+				                            c-0.061-0.491-0.145-0.973-0.238-1.451c-0.025-0.131-0.051-0.261-0.079-0.391c-0.122-0.572-0.267-1.133-0.433-1.685
+				                            c-0.034-0.112-0.069-0.224-0.104-0.336c-0.182-0.569-0.386-1.127-0.612-1.672c-0.034-0.083-0.069-0.165-0.105-0.247
+				                            c-0.244-0.567-0.51-1.12-0.799-1.659c-0.03-0.057-0.061-0.113-0.092-0.169c-0.304-0.553-0.63-1.091-0.979-1.612
+				                            c-0.029-0.043-0.058-0.085-0.086-0.127c-0.356-0.523-0.734-1.029-1.134-1.517c-0.035-0.042-0.07-0.084-0.105-0.126
+				                            c-0.398-0.478-0.816-0.938-1.253-1.379c-0.049-0.05-0.099-0.098-0.149-0.148c-0.43-0.424-0.876-0.831-1.339-1.217
+				                            c-0.07-0.058-0.14-0.115-0.21-0.172c-0.454-0.369-0.922-0.719-1.404-1.05c-0.089-0.061-0.18-0.121-0.27-0.181
+				                            c-0.477-0.316-0.966-0.614-1.468-0.892c-0.102-0.057-0.206-0.111-0.309-0.166c-0.507-0.269-1.024-0.519-1.553-0.748
+				                            c-0.102-0.044-0.203-0.086-0.306-0.128c-0.547-0.226-1.104-0.431-1.671-0.611c-0.087-0.028-0.174-0.054-0.261-0.081
+				                            c-0.595-0.181-1.2-0.337-1.814-0.466c-0.064-0.013-0.127-0.026-0.191-0.039c-0.642-0.129-1.292-0.228-1.951-0.298
+				                            c-0.046-0.005-0.093-0.01-0.139-0.014c-0.667-0.066-1.341-0.1-2.022-0.102c-0.031,0-0.061-0.005-0.091-0.005
+				                            c-0.029,0-0.056,0.004-0.084,0.004c-0.638,0.003-1.28,0.036-1.926,0.097c-0.11,0.01-0.219,0.021-0.328,0.033
+				                            c-0.103,0.011-0.205,0.018-0.308,0.031l-170.667,21.333c-0.491,0.061-0.973,0.145-1.451,0.238
+				                            c-0.131,0.025-0.261,0.051-0.391,0.079c-0.572,0.122-1.133,0.267-1.685,0.433c-0.112,0.034-0.224,0.069-0.336,0.104
+				                            c-0.569,0.182-1.126,0.386-1.672,0.612c-0.083,0.034-0.165,0.069-0.248,0.105c-0.567,0.244-1.121,0.51-1.659,0.799
+				                            c-0.056,0.03-0.111,0.061-0.167,0.091c-0.553,0.304-1.091,0.63-1.612,0.979c-0.043,0.029-0.086,0.059-0.129,0.088
+				                            c-0.523,0.356-1.029,0.734-1.516,1.133c-0.042,0.034-0.083,0.07-0.125,0.104c-0.478,0.398-0.939,0.816-1.379,1.254
+				                            c-0.05,0.049-0.098,0.099-0.148,0.149c-0.424,0.43-0.831,0.876-1.217,1.339c-0.058,0.07-0.115,0.14-0.172,0.211
+				                            c-0.368,0.453-0.719,0.92-1.049,1.402c-0.062,0.09-0.122,0.182-0.183,0.273c-0.316,0.477-0.614,0.965-0.891,1.467
+				                            c-0.056,0.102-0.111,0.205-0.166,0.308c-0.27,0.507-0.52,1.025-0.748,1.553c-0.044,0.101-0.086,0.203-0.128,0.305
+				                            c-0.227,0.547-0.431,1.104-0.612,1.671c-0.028,0.086-0.054,0.173-0.081,0.26c-0.182,0.595-0.337,1.2-0.467,1.815
+				                            c-0.013,0.064-0.026,0.127-0.039,0.191c-0.129,0.642-0.228,1.293-0.298,1.952c-0.005,0.046-0.01,0.092-0.014,0.138
+				                            c-0.066,0.667-0.1,1.342-0.102,2.023c0,0.031-0.005,0.061-0.005,0.091v64h-27.422c-34.836,0-57.92,29.65-57.92,65.045
+				                            c0,34.774,28.191,62.955,62.955,62.955h7.125c34.759,0,57.92-23.141,57.92-57.899v-48.599c0-0.057,0.009-0.112,0.009-0.169
+				                            v-66.501l128-16V288h-27.422c-34.836,0-57.92,29.65-57.92,65.045c0,34.774,28.191,62.955,62.955,62.955h7.125
+				                            c34.759,0,57.92-23.141,57.92-57.899v-48.599c0-0.057,0.009-0.112,0.009-0.169V202.667c0-0.029-0.004-0.056-0.004-0.084
+				                            C405.326,201.945,405.293,201.302,405.232,200.656z M191.991,358.101c0,11.185-4.05,15.232-15.253,15.232h-7.125
+				                            c-11.203,0-20.288-9.082-20.288-20.288c0-13.838,6.649-22.379,15.253-22.379h27.413V358.101z M362.658,358.101
+				                            c0,11.185-4.05,15.232-15.253,15.232h-7.125c-11.203,0-20.288-9.082-20.288-20.288c0-13.838,6.649-22.379,15.253-22.379h27.413
+				                            V358.101z" />
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                            <span class="ml-5 text-xl text-gray-600 group-hover:text-white font-semibold">Your
+                                Library</span>
+                        </button>
+                        <div
+                            class="group text-3xl cursor-pointer h-7 w-7 rounded-xl flex justify-center items-center text-gray-600 hover:text-white hover:bg-gray-400 hover:bg-opacity-10">
+                            +
+                            <span
+                                class="text-white select-none fixed top-[15vh] left-[12vw] p-1 bg-[#121212] text-sm hidden group-hover:block">Create
+                                playlist or folder</span>
+                        </div>
+                    </div>
+                    <!--Library Button Ends-->
+
+                    <!--Playlist and Artist Buttons Starts-->
+                    <div class="h-12 w-64 mx-auto flex items-center">
+                        <button class="playlistBtn p-2 mx-3 w-20 rounded-3xl bg-white text-black text-sm">
+                            Playlists </button>
+                        <button
+                            class="artistBtn p-2 w-20 rounded-3xl bg-[#242424] text-white text-sm hover:bg-gray-800">Artist</button>
+                    </div>
+                    <!--Playlist and Artist Buttons Ends-->
+
+                    <!--Search and all Playlists Starts-->
+                    <div class="w-full h-[51.5vh] rounded-b-xl flex flex-col overflow-y-scroll gap-1">
+                        <div class="w-64 mx-auto h-10 flex items-center">
+                            <span
+                                class="group cursor-pointer h-6 p-1 w-7 rounded-xl flex justify-center items-center hover:bg-gray-400 hover:bg-opacity-10">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101 101" width="30" height="30"
+                                    id="search">
+                                    <path class="group-hover:stroke-white group-hover:fill-white" fill="gray"
+                                        stroke="gray" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                        d="M63.3 59.9c3.8-4.6 6.2-10.5 6.2-17 0-14.6-11.9-26.5-26.5-26.5S16.5 28.3 16.5 42.9 28.4 69.4 43 69.4c6.4 0 12.4-2.3 17-6.2l20.6 20.6c.5.5 1.1.7 1.7.7.6 0 1.2-.2 1.7-.7.9-.9.9-2.5 0-3.4L63.3 59.9zm-20.4 4.7c-12 0-21.7-9.7-21.7-21.7s9.7-21.7 21.7-21.7 21.7 9.7 21.7 21.7-9.7 21.7-21.7 21.7z">
+                                    </path>
+                                </svg>
+                                <span
+                                    class="fixed top-[29vh] left-2 p-1 bg-[#121212] text-sm text-white hidden group-hover:block ">Search
+                                    in Your Library</span>
+                            </span>
+                            <input type="text" autofocus placeholder="Search in Your Library"
+                                class=" h-6 w-40 my-3 text-sm bg-[#242424] p-2 outline-none text-white">
+                        </div>
+                        <div class="playlist h-auto w-auto mx-4 my-4 flex flex-col justify-center items-center gap-3">
+                        </div>
+                        <div class="artistNav h-auto w-auto mx-4 my-4 hidden"></div>
+                    </div>
+                    <!--Search and all Playlists Ends-->
+                </div>
+                <!--library Ends-->
+            </div>
+            <!--Side Bar Ends-->
+
+            <!--Main Spotify Content Starts-->
+            <!--Home Window Starts-->
+            <div
+                class="mainWindow bg-[#121212] w-full h-[98%] my-2 mx-1 rounded-lg overflow-y-scroll overflow-x-hidden">
+                <!--Header Starts-->
+                <div
+                    class="h-20 w-[79.7vw] bg-[#121212] absolute rounded-t-lg border-b-2 border-gray-600 flex items-center justify-between z-10">
+                    <!--Spotify Logo Starts-->
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="50" width="150" class="logo ml-10 hover:cursor-pointer"
+                        viewBox="-111.68505 -55.829 967.9371 334.974">
+                        <path
+                            d="M177.707 98.987c-35.992-21.375-95.36-23.34-129.719-12.912-5.519 1.674-11.353-1.44-13.024-6.958-1.672-5.521 1.439-11.352 6.96-13.029 39.443-11.972 105.008-9.66 146.443 14.936 4.964 2.947 6.59 9.356 3.649 14.31-2.944 4.963-9.359 6.6-14.31 3.653m-1.178 31.658c-2.525 4.098-7.883 5.383-11.975 2.867-30.005-18.444-75.762-23.788-111.262-13.012-4.603 1.39-9.466-1.204-10.864-5.8a8.717 8.717 0 015.805-10.856c40.553-12.307 90.968-6.347 125.432 14.833 4.092 2.52 5.38 7.88 2.864 11.968m-13.663 30.404a6.954 6.954 0 01-9.569 2.316c-26.22-16.025-59.223-19.644-98.09-10.766a6.955 6.955 0 01-8.331-5.232 6.95 6.95 0 015.233-8.334c42.533-9.722 79.017-5.538 108.448 12.446a6.96 6.96 0 012.31 9.57M111.656 0C49.992 0 0 49.99 0 111.656c0 61.672 49.992 111.66 111.657 111.66 61.668 0 111.659-49.988 111.659-111.66C223.316 49.991 173.326 0 111.657 0m192.125 103.08c-19.279-4.598-22.71-7.825-22.71-14.605 0-6.405 6.03-10.714 14.998-10.714 8.693 0 17.312 3.273 26.35 10.012.274.204.616.285.954.232a1.24 1.24 0 00.833-.515l9.413-13.27c.387-.546.282-1.3-.24-1.717-10.756-8.63-22.868-12.826-37.025-12.826-20.816 0-35.356 12.49-35.356 30.365 0 19.167 12.543 25.952 34.217 31.192 18.448 4.25 21.562 7.808 21.562 14.173 0 7.052-6.295 11.436-16.427 11.436-11.253 0-20.432-3.79-30.7-12.682a1.329 1.329 0 00-.927-.302c-.34.028-.65.186-.866.446l-10.555 12.561c-.443.521-.387 1.3.125 1.75 11.947 10.666 26.64 16.3 42.495 16.3 22.432 0 36.925-12.257 36.925-31.226 0-16.032-9.577-24.899-33.066-30.61m100.098 21.486c0 13.537-8.34 22.984-20.28 22.984-11.803 0-20.707-9.876-20.707-22.984 0-13.107 8.904-22.984 20.708-22.984 11.748 0 20.279 9.664 20.279 22.984m-16.283-40.5c-9.723 0-17.697 3.83-24.273 11.676V86.91c0-.697-.566-1.265-1.263-1.265H344.8c-.698 0-1.262.568-1.262 1.265v98.136c0 .697.564 1.265 1.262 1.265h17.26c.698 0 1.264-.568 1.264-1.265v-30.977c6.577 7.382 14.553 10.988 24.273 10.988 18.065 0 36.353-13.907 36.353-40.491 0-26.59-18.288-40.5-36.353-40.5m83.231 63.625c-12.375 0-21.704-9.942-21.704-23.125 0-13.239 9.006-22.845 21.418-22.845 12.454 0 21.847 9.942 21.847 23.134 0 13.236-9.068 22.836-21.561 22.836m0-63.625c-23.266 0-41.492 17.915-41.492 40.79 0 22.625 18.101 40.351 41.206 40.351 23.348 0 41.631-17.854 41.631-40.641 0-22.71-18.157-40.5-41.345-40.5m91.027 1.579H542.86V66.223c0-.697-.562-1.265-1.26-1.265h-17.26c-.698 0-1.266.568-1.266 1.265v19.422h-8.3c-.695 0-1.258.568-1.258 1.265v14.835c0 .697.563 1.265 1.258 1.265h8.3v38.388c0 15.513 7.721 23.38 22.949 23.38 6.192 0 11.33-1.279 16.172-4.024.392-.22.637-.644.637-1.095v-14.128a1.264 1.264 0 00-1.829-1.133c-3.325 1.673-6.54 2.445-10.133 2.445-5.538 0-8.01-2.514-8.01-8.15V103.01h18.996c.698 0 1.259-.568 1.259-1.265V86.91c0-.697-.561-1.265-1.259-1.265m66.182.075v-2.385c0-7.018 2.69-10.147 8.725-10.147 3.6 0 6.49.715 9.727 1.795a1.262 1.262 0 001.66-1.202V59.233a1.26 1.26 0 00-.892-1.21c-3.42-1.018-7.796-2.063-14.348-2.063-15.945 0-24.372 8.98-24.372 25.956v3.653h-8.292a1.27 1.27 0 00-1.268 1.264v14.912c0 .696.57 1.266 1.268 1.266h8.292v59.212c0 .697.563 1.265 1.259 1.265h17.261c.697 0 1.265-.568 1.265-1.265V103.01h16.118l24.69 59.196c-2.804 6.22-5.56 7.457-9.322 7.457-3.042 0-6.244-.908-9.519-2.699a1.29 1.29 0 00-1.005-.094c-.33.116-.607.361-.747.681l-5.85 12.836a1.255 1.255 0 00.542 1.633c6.108 3.308 11.623 4.72 18.436 4.72 12.747 0 19.792-5.937 26.004-21.91l29.948-77.388a1.264 1.264 0 00-1.172-1.723h-17.97a1.27 1.27 0 00-1.197.848L678.87 139.15l-20.164-52.618a1.259 1.259 0 00-1.179-.813zm-38.368-.075h-17.263c-.696 0-1.264.568-1.264 1.265v75.312c0 .697.568 1.265 1.264 1.265h17.263c.696 0 1.265-.568 1.265-1.265V86.91c0-.697-.57-1.265-1.265-1.265m-8.543-34.292c-6.839 0-12.388 5.536-12.388 12.374 0 6.843 5.549 12.386 12.388 12.386 6.836 0 12.38-5.543 12.38-12.386 0-6.838-5.544-12.374-12.38-12.374m151.936 41.783H729.9v4.033h3.163c1.578 0 2.52-.772 2.52-2.017 0-1.313-.942-2.016-2.52-2.016m2.049 5.753l3.437 4.811h-2.897l-3.093-4.412h-2.66v4.412h-2.424V90.95h5.685c2.963 0 4.912 1.515 4.912 4.066 0 2.09-1.208 3.368-2.96 3.873m-2.693-12.184c-6.222 0-10.931 4.947-10.931 11.004 0 6.054 4.675 10.935 10.868 10.935 6.22 0 10.935-4.944 10.935-11.004 0-6.055-4.68-10.935-10.872-10.935m-.063 23.154c-6.832 0-12.148-5.487-12.148-12.15 0-6.662 5.385-12.212 12.21-12.212 6.833 0 12.149 5.486 12.149 12.143 0 6.664-5.382 12.219-12.211 12.219"
+                            fill="white" />
+                    </svg>
+                    </div>
+                    <!--Spotify Logo Ends-->
+                    <div class="bg-[#121212] flex items-center h-10 w-auto gap-4 mr-3">
+                        <!--Premium Button Starts-->
+                        <div
+                            class="h-8 w-40 bg-white text-black flex justify-center items-center text-sm font-semibold rounded-3xl hover:scale-105  hover:duration-200 cursor-pointer">
+                            Explore Premium
+                        </div>
+                        <!--Premium Button Ends-->
+                        <!--Install App icon Start-->
+                        <a href="https://www.spotify.com/in-en/download/windows/" target="_blank"
+                            class="ml- h-9 hover:scale-105  hover:duration-200 w-32 rounded-2xl font-semibold p-3 flex items-center justify-between bg-black text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-arrow-down-circle">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="8 12 12 16 16 12"></polyline>
+                                <line x1="12" y1="8" x2="12" y2="16"></line>
+                            </svg>
+                            <p>Install App</p>
+                        </a>
+                        <!--Install App icon End-->
+                        <!--Bell Icon Start-->
+                        <div class="group bg-black h-9 rounded-3xl flex justify-center items-center w-9 cursor-pointer">
+                            <?xml version="1.0" ?>
+                            <!DOCTYPE svg
+                                PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
+                                height="25px" id="Layer_1" stroke="gray" stroke-width="30"
+                                class="group-hover:stroke-white group-hover:scale-105"
+                                style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"
+                                width="25px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g>
+                                    <path
+                                        d="M381.7,225.9c0-97.6-52.5-130.8-101.6-138.2c0-0.5,0.1-1,0.1-1.6c0-12.3-10.9-22.1-24.2-22.1c-13.3,0-23.8,9.8-23.8,22.1   c0,0.6,0,1.1,0.1,1.6c-49.2,7.5-102,40.8-102,138.4c0,113.8-28.3,126-66.3,158h384C410.2,352,381.7,339.7,381.7,225.9z" />
+                                    <path
+                                        d="M256.2,448c26.8,0,48.8-19.9,51.7-43H204.5C207.3,428.1,229.4,448,256.2,448z" />
+                                </g>
+                            </svg>
+                            <span
+                                class="group-hover:block text-white text-sm absolute top-[9vh] hidden bg-black p-1 text-center font-semibold rounded-sm">What's
+                                New</span>
+                        </div>
+                        <!--Bell Icon End-->
+                        <!--User Profile Start-->
+                        <div
+                            class="group h-9 w-9 flex justify-center items-center bg-black rounded-3xl hover:scale-105 cursor-pointer">
+                            <div class="h-7 w-7 bg-pink-500 rounded-2xl font-bold flex justify-center items-center">U
+                            </div>
+                            <span
+                                class="group-hover:block text-white text-sm absolute right-[0.1vw] top-[5.7vh] hidden bg-black p-1 rounded-sm w-20 text-center font-semibold">User
+                                Name</span>
+                        </div>
+                        <!--User Profile End-->
+                    </div>
+                </div>
+                <!--Header Ends-->
+
+                <div class="main bg-[#121212] w-[90vw] h-auto my-2 mx-1 rounded-lg overflow-y-scroll overflow-x-hidden">
+                    <h1 class="greetings mt-24 text-3xl m-5 font-bold mb-5 text-white"></h1>
+                    <h1 class="ml-5 mt-8 mb-5 text-2xl font-semibold text-white">Made For You</h1>
+                    <div class="artists w-[80vw] h-auto mx-5 flex flex-wrap justify-center items-center gap-5 px-5">
+                    </div>
+                </div>
+                <div class="artistTracks w-[80vw] h-auto mx-5 gap-5 mt-24 hidden"></div>
+                <div class="containerPlaylistTracksNav mx-7 mt-24 h-auto w-auto text-white gap-5 hidden"></div>
+                <!--flex flex-wrap items-center-->
+                <div class="containerArtistNavTracks mx-7 mt-24 h-auto w-auto text-white hidden gap-5"></div>
+
+                <!--Footer Starts-->
+                <div class="footer2 hidden h-96 w-full bg-[#121212]">
+                    <div class="h-64 w-full flex ">
+                        <div class="h-40 w-40 mx-6 mt-5 flex flex-col justify-center gap-1">
+                            <h3 class="text-white font-bold">Company</h3>
+                            <span><span
+                                    class="text-gray-500 hover:text-white cursor-pointer hover:underline">About</span></span>
+                            <span><span
+                                    class="text-gray-500 hover:text-white cursor-pointer hover:underline">Jobs</span></span>
+                            <span><span class="text-gray-500 hover:text-white cursor-pointer hover:underline">For the
+                                    Record</span></span>
+                        </div>
+                        <div class="h-60 w-40 mt-2 mx-8 flex flex-col justify-center gap-1">
+                            <h3 class="text-white font-bold">Communities</h3>
+                            <span><span class="text-gray-500 hover:text-white cursor-pointer hover:underline">For
+                                    Artists</span></span>
+                            <span><span
+                                    class="text-gray-500 hover:text-white cursor-pointer hover:underline">Developers</span></span>
+                            <span><span
+                                    class="text-gray-500 hover:text-white cursor-pointer hover:underline">Advertising</span></span>
+                            <span><span
+                                    class="text-gray-500 hover:text-white cursor-pointer hover:underline">Investors</span></span>
+                            <span><span
+                                    class="text-gray-500 hover:text-white cursor-pointer hover:underline">Vendors</span></span>
+                        </div>
+                        <div class="h-40 w-40 mt-2 mx-8 flex flex-col justify-center gap-1">
+                            <h3 class="text-white font-bold">Useful links</h3>
+                            <span><span
+                                    class="text-gray-500 hover:text-white cursor-pointer hover:underline">Support</span></span>
+                            <span><span class="text-gray-500 hover:text-white cursor-pointer hover:underline">Free
+                                    Mobile App</span></span>
+                        </div>
+                        <div class="h-20 w-48 mt-8 ml-96 flex justify-evenly items-center  ">
+                            <div class="group h-auto w-auto p-2 rounded-2xl bg-[#242424] hover:bg-gray-400 "><svg
+                                    xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
+                                    viewBox="0,0,256,256">
+                                    <g fill="#242424" class="group-hover:fill-gray-400" fill-rule="nonzero"
+                                        stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
+                                        stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                                        font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                                        style="mix-blend-mode: normal">
+                                        <path d="M0,256v-256h256v256z" id="bgRectangle"></path>
+                                    </g>
+                                    <g fill="#ffffff" fill-rule="nonzero" stroke="white" stroke-width="1"
+                                        stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                        stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                        font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                        <g transform="scale(5.12,5.12)">
+                                            <path
+                                                d="M16,3c-7.16752,0 -13,5.83248 -13,13v18c0,7.16752 5.83248,13 13,13h18c7.16752,0 13,-5.83248 13,-13v-18c0,-7.16752 -5.83248,-13 -13,-13zM16,5h18c6.08648,0 11,4.91352 11,11v18c0,6.08648 -4.91352,11 -11,11h-18c-6.08648,0 -11,-4.91352 -11,-11v-18c0,-6.08648 4.91352,-11 11,-11zM37,11c-1.10457,0 -2,0.89543 -2,2c0,1.10457 0.89543,2 2,2c1.10457,0 2,-0.89543 2,-2c0,-1.10457 -0.89543,-2 -2,-2zM25,14c-6.06329,0 -11,4.93671 -11,11c0,6.06329 4.93671,11 11,11c6.06329,0 11,-4.93671 11,-11c0,-6.06329 -4.93671,-11 -11,-11zM25,16c4.98241,0 9,4.01759 9,9c0,4.98241 -4.01759,9 -9,9c-4.98241,0 -9,-4.01759 -9,-9c0,-4.98241 4.01759,-9 9,-9z">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="group h-auto w-auto p-2 rounded-2xl bg-[#242424] hover:bg-gray-400 "><svg
+                                    xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
+                                    viewBox="0,0,256,256">
+                                    <g fill="#242424" class="group-hover:fill-gray-400" fill-rule="nonzero"
+                                        stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
+                                        stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                                        font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                                        style="mix-blend-mode: normal">
+                                        <path d="M0,256v-256h256v256z" id="bgRectangle"></path>
+                                    </g>
+                                    <g fill="#ffffff" fill-rule="nonzero" stroke="white" stroke-width="1"
+                                        stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                        stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                        font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                        <g transform="scale(5.12,5.12)">
+                                            <path
+                                                d="M34.21875,5.46875c-5.98047,0 -10.84375,4.86328 -10.84375,10.84375c0,0.35938 0.08984,0.71094 0.125,1.0625c-7.39453,-0.70703 -13.93359,-4.26953 -18.375,-9.71875c-0.20703,-0.26172 -0.52734,-0.40234 -0.86328,-0.37891c-0.33203,0.02344 -0.62891,0.21484 -0.79297,0.50391c-0.93359,1.60547 -1.46875,3.45313 -1.46875,5.4375c0,2.40234 0.85938,4.60156 2.1875,6.40625c-0.25781,-0.11328 -0.53906,-0.17578 -0.78125,-0.3125c-0.30859,-0.16406 -0.67969,-0.15625 -0.98047,0.02344c-0.30078,0.17969 -0.48438,0.50391 -0.48828,0.85156v0.125c0,3.68359 1.90625,6.88281 4.71875,8.84375c-0.03125,-0.00391 -0.0625,0.00781 -0.09375,0c-0.34375,-0.05859 -0.69141,0.0625 -0.92187,0.32422c-0.23047,0.26172 -0.30469,0.625 -0.20312,0.95703c1.11719,3.47266 3.96875,6.125 7.5,7.09375c-2.8125,1.67188 -6.07422,2.65625 -9.59375,2.65625c-0.76172,0 -1.49219,-0.03906 -2.21875,-0.125c-0.46875,-0.0625 -0.91797,0.21094 -1.07422,0.65625c-0.16016,0.44531 0.01563,0.94141 0.41797,1.1875c4.51172,2.89453 9.86719,4.59375 15.625,4.59375c9.33203,0 16.65234,-3.89844 21.5625,-9.46875c4.91016,-5.57031 7.46875,-12.80469 7.46875,-19.5625c0,-0.28516 -0.02344,-0.5625 -0.03125,-0.84375c1.83203,-1.40234 3.46875,-3.04687 4.75,-4.96875c0.25391,-0.37109 0.22656,-0.86719 -0.06641,-1.21094c-0.28906,-0.34375 -0.77734,-0.44922 -1.18359,-0.25781c-0.51562,0.23047 -1.11719,0.25391 -1.65625,0.4375c0.71094,-0.94922 1.32031,-1.97266 1.6875,-3.125c0.125,-0.39453 -0.01172,-0.82812 -0.33594,-1.08594c-0.32422,-0.25391 -0.77734,-0.28516 -1.13281,-0.07031c-1.70703,1.01172 -3.59766,1.72266 -5.59375,2.15625c-1.9375,-1.8125 -4.48828,-3.03125 -7.34375,-3.03125zM34.21875,7.46875c2.55078,0 4.85547,1.08984 6.46875,2.8125c0.24219,0.25 0.59766,0.35547 0.9375,0.28125c1.30469,-0.25781 2.54297,-0.63672 3.75,-1.125c-0.69531,0.9375 -1.55469,1.73828 -2.5625,2.34375c-0.45703,0.22266 -0.67187,0.75 -0.50391,1.23047c0.16406,0.47656 0.66406,0.75391 1.16016,0.64453c1,-0.12109 1.89063,-0.52734 2.84375,-0.78125c-0.85547,0.92578 -1.79297,1.76172 -2.8125,2.5c-0.27734,0.20313 -0.42969,0.53125 -0.40625,0.875c0.01563,0.40625 0.03125,0.80859 0.03125,1.21875c0,6.25 -2.39844,13.03516 -6.96875,18.21875c-4.57031,5.18359 -11.28125,8.8125 -20.0625,8.8125c-3.98828,0 -7.75391,-0.88281 -11.15625,-2.4375c4.21875,-0.32422 8.10938,-1.81641 11.25,-4.28125c0.32813,-0.26172 0.45703,-0.69922 0.32422,-1.09766c-0.13281,-0.39844 -0.5,-0.67187 -0.91797,-0.68359c-3.29687,-0.05859 -6.05859,-1.97656 -7.53125,-4.6875c0.05469,0 0.10156,0 0.15625,0c0.98828,0 1.96484,-0.125 2.875,-0.375c0.4375,-0.12891 0.73828,-0.53516 0.72266,-0.99219c-0.01562,-0.45703 -0.33984,-0.84766 -0.78516,-0.94531c-3.55859,-0.71875 -6.22656,-3.61719 -6.84375,-7.21875c1.00781,0.34766 2.03906,0.62109 3.15625,0.65625c0.45703,0.02734 0.87109,-0.25781 1.01172,-0.69141c0.14063,-0.43359 -0.03125,-0.91016 -0.41797,-1.15234c-2.375,-1.58984 -3.9375,-4.29687 -3.9375,-7.375c0,-1.14062 0.29688,-2.1875 0.6875,-3.1875c5,5.48828 12,9.13281 19.90625,9.53125c0.3125,0.01563 0.61719,-0.11328 0.82031,-0.35156c0.20313,-0.24219 0.28125,-0.5625 0.21094,-0.86719c-0.15234,-0.64844 -0.25,-1.33594 -0.25,-2.03125c0,-4.89844 3.94531,-8.84375 8.84375,-8.84375z">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="group h-auto w-auto p-2 rounded-2xl bg-[#242424] hover:bg-gray-400 "><svg
+                                    xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
+                                    viewBox="0,0,256,256">
+                                    <g fill="#242424" class="group-hover:fill-gray-400" fill-rule="nonzero"
+                                        stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
+                                        stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                                        font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                                        style="mix-blend-mode: normal">
+                                        <path d="M0,256v-256h256v256z" id="bgRectangle"></path>
+                                    </g>
+                                    <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                        stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                        stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                        font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                        <g transform="scale(5.12,5.12)">
+                                            <path
+                                                d="M25,3c-12.13844,0 -22,9.86156 -22,22c0,11.01913 8.12753,20.13835 18.71289,21.72852l1.14844,0.17383v-17.33594h-5.19727v-3.51953h5.19727v-4.67383c0,-2.87808 0.69065,-4.77363 1.83398,-5.96289c1.14334,-1.18926 2.83269,-1.78906 5.18359,-1.78906c1.87981,0 2.61112,0.1139 3.30664,0.19922v2.88086h-2.44727c-1.38858,0 -2.52783,0.77473 -3.11914,1.80664c-0.59131,1.03191 -0.77539,2.264 -0.77539,3.51953v4.01758h6.12305l-0.54492,3.51953h-5.57812v17.36523l1.13477,-0.1543c10.73582,-1.45602 19.02148,-10.64855 19.02148,-21.77539c0,-12.13844 -9.86156,-22 -22,-22zM25,5c11.05756,0 20,8.94244 20,20c0,9.72979 -6.9642,17.7318 -16.15625,19.5332v-12.96875h5.29297l1.16211,-7.51953h-6.45508v-2.01758c0,-1.03747 0.18982,-1.96705 0.50977,-2.52539c0.31994,-0.55834 0.62835,-0.80078 1.38477,-0.80078h4.44727v-6.69141l-0.86719,-0.11719c-0.59979,-0.08116 -1.96916,-0.27148 -4.43945,-0.27148c-2.7031,0 -5.02334,0.73635 -6.625,2.40234c-1.60166,1.66599 -2.39258,4.14669 -2.39258,7.34961v2.67383h-5.19727v7.51953h5.19727v12.9043c-9.04433,-1.91589 -15.86133,-9.84626 -15.86133,-19.4707c0,-11.05756 8.94244,-20 20,-20z">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="w-[72vw] mx-auto">
+                    <div class="w-full h-7"></div>
+                    <div class="h-24 w-full ">
+                        <span class="text-gray-500 hover:text-white cursor-pointer mt-4 mx-3">Legal</span>
+                        <span class="text-gray-500 hover:text-white cursor-pointer mt-4 mx-3">Privacy Center</span>
+                        <span class="text-gray-500 hover:text-white cursor-pointer mt-4 mx-3">Privacy Policy</span>
+                        <span class="text-gray-500 hover:text-white cursor-pointer mt-4 mx-3">Cookies</span>
+                        <span class="text-gray-500 hover:text-white cursor-pointer mt-4 mx-3">About Ads</span>
+                        <span class="text-gray-500 hover:text-white cursor-pointer mt-4 mx-3">Accessibility</span>
+                        <span class="text-gray-500 mt-4 ml-96">© 2024 Spotify Clone</span>
+                    </div>
+                </div>
+                <!--Footer Endss-->
+            </div>
+            <!--Home Window Ends-->
+
+            <!--Search Window Starts-->
+            <div class="searchWindow hidden bg-[#121212] w-full h-[98%] my-2 mx-1 rounded-lg overflow-y-scroll">
+                <!--Search and Install app Button Starts-->
+                <div class="h-20 w-[79.7vw] bg-[#121212] rounded-t-lg absolute flex items-center justify-between z-10">
+                    <!--Search Button starts-->
+                    <div class="group bg-[#242424] w-96 h-14 ml-10 rounded-full flex justify-between items-center hover:border-gray-100 hover:border-2 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101 101" width="35" height="35"
+                            id="search">
+                            <path class="group-hover:stroke-white group-hover:fill-white" fill="gray" stroke="gray"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                                d="M63.3 59.9c3.8-4.6 6.2-10.5 6.2-17 0-14.6-11.9-26.5-26.5-26.5S16.5 28.3 16.5 42.9 28.4 69.4 43 69.4c6.4 0 12.4-2.3 17-6.2l20.6 20.6c.5.5 1.1.7 1.7.7.6 0 1.2-.2 1.7-.7.9-.9.9-2.5 0-3.4L63.3 59.9zm-20.4 4.7c-12 0-21.7-9.7-21.7-21.7s9.7-21.7 21.7-21.7 21.7 9.7 21.7 21.7-9.7 21.7-21.7 21.7z">
+                            </path>
+                        </svg>
+                        <input class="h-12 outline-none text-white bg-[#242424] w-72 p-2" type="text"
+                            placeholder="What do you want to listen to?">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="mr-4 rounded-xl" x="0px" y="0px" width="22"
+                            height="22" viewBox="0,0,256,256">
+                            <g fill="#242424" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                                stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                                font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                                style="mix-blend-mode: normal">
+                                <path d="M0,256v-256h256v256z" id="bgRectangle"></path>
+                            </g>
+                            <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                                stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                                font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                                style="mix-blend-mode: normal">
+                                <g transform="scale(5.12,5.12)">
+                                    <path
+                                        d="M7.71875,6.28125l-1.4375,1.4375l17.28125,17.28125l-17.28125,17.28125l1.4375,1.4375l17.28125,-17.28125l17.28125,17.28125l1.4375,-1.4375l-17.28125,-17.28125l17.28125,-17.28125l-1.4375,-1.4375l-17.28125,17.28125z">
+                                    </path>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                    <!--Search Button Ends-->
+                    <!--Install App ,Notification and UserProfile Starts-->
+                    <div class="bg-[#121212] flex items-center h-10 w-60">
+                        <!--Install App icon Start-->
+                        <a href="https://www.spotify.com/in-en/download/windows/" target="_blank"
+                            class="h-9 hover:scale-105  hover:duration-200 w-32 rounded-2xl font-semibold p-3 flex items-center justify-between bg-black text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-arrow-down-circle">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="8 12 12 16 16 12"></polyline>
+                                <line x1="12" y1="8" x2="12" y2="16"></line>
+                            </svg>
+                            <p>Install App</p>
+                        </a>
+                        <!--Install App icon End-->
+                        <!--Bell Icon Start-->
+                        <div
+                            class="group bg-black h-9 rounded-3xl flex justify-center items-center w-9 cursor-pointer ml-3">
+                            <?xml version="1.0" ?>
+                            <!DOCTYPE svg
+                                PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
+                                height="25px" id="Layer_1" stroke="gray" stroke-width="30"
+                                class="group-hover:stroke-white group-hover:scale-105"
+                                style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"
+                                width="25px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g>
+                                    <path
+                                        d="M381.7,225.9c0-97.6-52.5-130.8-101.6-138.2c0-0.5,0.1-1,0.1-1.6c0-12.3-10.9-22.1-24.2-22.1c-13.3,0-23.8,9.8-23.8,22.1   c0,0.6,0,1.1,0.1,1.6c-49.2,7.5-102,40.8-102,138.4c0,113.8-28.3,126-66.3,158h384C410.2,352,381.7,339.7,381.7,225.9z" />
+                                    <path
+                                        d="M256.2,448c26.8,0,48.8-19.9,51.7-43H204.5C207.3,428.1,229.4,448,256.2,448z" />
+                                </g>
+                            </svg>
+                            <span
+                                class="group-hover:block text-white text-sm absolute top-[9vh] hidden bg-black p-1 text-center font-semibold rounded-sm">What's
+                                New</span>
+                        </div>
+                        <!--Bell Icon End-->
+                        <!--User Profile Start-->
+                        <div
+                            class="group ml-3 h-9 w-9 flex justify-center items-center bg-black rounded-3xl hover:scale-105 cursor-pointer">
+                            <div class="h-7 w-7 bg-pink-500 rounded-2xl font-bold flex justify-center items-center">U
+                            </div>
+                            <span
+                                class="group-hover:block text-white text-sm absolute right-[0.1vw] top-[5.7vh] hidden bg-black p-1 rounded-sm w-20 text-center font-semibold">User
+                                Name</span>
+                        </div>
+                        <!--User Profile End-->
+                    </div>
+                    <!--Install App ,Notification and UserProfile Ends-->
+                </div>
+                <!--Search and Install app Button Ends-->
+                <h2 class="browse text-white text-2xl mt-24 font-bold ml-7 ">Browse all</h2>
+                <div
+                    class="container h-auto w-auto mx-7 mt-4 text-white flex flex-wrap justify-center items-center gap-10">
+                </div>
+                <div
+                    class="container2 h-auto w-auto mx-7 mt-32 my-5 text-white flex flex-wrap justify-center items-center gap-5">
+                </div>
+                <div
+                    class="container3 h-auto w-auto mx-7 mt-32 text-white my-6 flex flex-wrap justify-center items-center gap-6">
+                </div>
+                <div class="containerPlaylistTracksNavX mx-7 h-auto w-auto text-white gap-5 hidden"></div>
+                <!--flex flex-wrap items-center-->
+                <div class="containerArtistNavTracksX mx-7 mt-24 h-auto w-auto text-white hidden gap-5"></div>
+
+                <!--Footer Starts-->
+                <div class="footer h-96 w-full bg-[#121212]">
+                    <div class="h-64 w-full flex ">
+                        <div class="h-40 w-40 mx-6 mt-5 flex flex-col justify-center gap-1">
+                            <h3 class="text-white font-bold">Company</h3>
+                            <span><span
+                                    class="text-gray-500 hover:text-white cursor-pointer hover:underline">About</span></span>
+                            <span><span
+                                    class="text-gray-500 hover:text-white cursor-pointer hover:underline">Jobs</span></span>
+                            <span><span class="text-gray-500 hover:text-white cursor-pointer hover:underline">For the
+                                    Record</span></span>
+                        </div>
+                        <div class="h-60 w-40 mt-2 mx-8 flex flex-col justify-center gap-1">
+                            <h3 class="text-white font-bold">Communities</h3>
+                            <span><span class="text-gray-500 hover:text-white cursor-pointer hover:underline">For
+                                    Artists</span></span>
+                            <span><span
+                                    class="text-gray-500 hover:text-white cursor-pointer hover:underline">Developers</span></span>
+                            <span><span
+                                    class="text-gray-500 hover:text-white cursor-pointer hover:underline">Advertising</span></span>
+                            <span><span
+                                    class="text-gray-500 hover:text-white cursor-pointer hover:underline">Investors</span></span>
+                            <span><span
+                                    class="text-gray-500 hover:text-white cursor-pointer hover:underline">Vendors</span></span>
+                        </div>
+                        <div class="h-40 w-40 mt-2 mx-8 flex flex-col justify-center gap-1">
+                            <h3 class="text-white font-bold">Useful links</h3>
+                            <span><span
+                                    class="text-gray-500 hover:text-white cursor-pointer hover:underline">Support</span></span>
+                            <span><span class="text-gray-500 hover:text-white cursor-pointer hover:underline">Free
+                                    Mobile App</span></span>
+                        </div>
+                        <div class="h-20 w-48 mt-8 ml-96 flex justify-evenly items-center  ">
+                            <div class="group h-auto w-auto p-2 rounded-2xl bg-[#242424] hover:bg-gray-400 "><svg
+                                    xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
+                                    viewBox="0,0,256,256">
+                                    <g fill="#242424" class="group-hover:fill-gray-400" fill-rule="nonzero"
+                                        stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
+                                        stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                                        font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                                        style="mix-blend-mode: normal">
+                                        <path d="M0,256v-256h256v256z" id="bgRectangle"></path>
+                                    </g>
+                                    <g fill="#ffffff" fill-rule="nonzero" stroke="white" stroke-width="1"
+                                        stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                        stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                        font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                        <g transform="scale(5.12,5.12)">
+                                            <path
+                                                d="M16,3c-7.16752,0 -13,5.83248 -13,13v18c0,7.16752 5.83248,13 13,13h18c7.16752,0 13,-5.83248 13,-13v-18c0,-7.16752 -5.83248,-13 -13,-13zM16,5h18c6.08648,0 11,4.91352 11,11v18c0,6.08648 -4.91352,11 -11,11h-18c-6.08648,0 -11,-4.91352 -11,-11v-18c0,-6.08648 4.91352,-11 11,-11zM37,11c-1.10457,0 -2,0.89543 -2,2c0,1.10457 0.89543,2 2,2c1.10457,0 2,-0.89543 2,-2c0,-1.10457 -0.89543,-2 -2,-2zM25,14c-6.06329,0 -11,4.93671 -11,11c0,6.06329 4.93671,11 11,11c6.06329,0 11,-4.93671 11,-11c0,-6.06329 -4.93671,-11 -11,-11zM25,16c4.98241,0 9,4.01759 9,9c0,4.98241 -4.01759,9 -9,9c-4.98241,0 -9,-4.01759 -9,-9c0,-4.98241 4.01759,-9 9,-9z">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="group h-auto w-auto p-2 rounded-2xl bg-[#242424] hover:bg-gray-400 "><svg
+                                    xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
+                                    viewBox="0,0,256,256">
+                                    <g fill="#242424" class="group-hover:fill-gray-400" fill-rule="nonzero"
+                                        stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
+                                        stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                                        font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                                        style="mix-blend-mode: normal">
+                                        <path d="M0,256v-256h256v256z" id="bgRectangle"></path>
+                                    </g>
+                                    <g fill="#ffffff" fill-rule="nonzero" stroke="white" stroke-width="1"
+                                        stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                        stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                        font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                        <g transform="scale(5.12,5.12)">
+                                            <path
+                                                d="M34.21875,5.46875c-5.98047,0 -10.84375,4.86328 -10.84375,10.84375c0,0.35938 0.08984,0.71094 0.125,1.0625c-7.39453,-0.70703 -13.93359,-4.26953 -18.375,-9.71875c-0.20703,-0.26172 -0.52734,-0.40234 -0.86328,-0.37891c-0.33203,0.02344 -0.62891,0.21484 -0.79297,0.50391c-0.93359,1.60547 -1.46875,3.45313 -1.46875,5.4375c0,2.40234 0.85938,4.60156 2.1875,6.40625c-0.25781,-0.11328 -0.53906,-0.17578 -0.78125,-0.3125c-0.30859,-0.16406 -0.67969,-0.15625 -0.98047,0.02344c-0.30078,0.17969 -0.48438,0.50391 -0.48828,0.85156v0.125c0,3.68359 1.90625,6.88281 4.71875,8.84375c-0.03125,-0.00391 -0.0625,0.00781 -0.09375,0c-0.34375,-0.05859 -0.69141,0.0625 -0.92187,0.32422c-0.23047,0.26172 -0.30469,0.625 -0.20312,0.95703c1.11719,3.47266 3.96875,6.125 7.5,7.09375c-2.8125,1.67188 -6.07422,2.65625 -9.59375,2.65625c-0.76172,0 -1.49219,-0.03906 -2.21875,-0.125c-0.46875,-0.0625 -0.91797,0.21094 -1.07422,0.65625c-0.16016,0.44531 0.01563,0.94141 0.41797,1.1875c4.51172,2.89453 9.86719,4.59375 15.625,4.59375c9.33203,0 16.65234,-3.89844 21.5625,-9.46875c4.91016,-5.57031 7.46875,-12.80469 7.46875,-19.5625c0,-0.28516 -0.02344,-0.5625 -0.03125,-0.84375c1.83203,-1.40234 3.46875,-3.04687 4.75,-4.96875c0.25391,-0.37109 0.22656,-0.86719 -0.06641,-1.21094c-0.28906,-0.34375 -0.77734,-0.44922 -1.18359,-0.25781c-0.51562,0.23047 -1.11719,0.25391 -1.65625,0.4375c0.71094,-0.94922 1.32031,-1.97266 1.6875,-3.125c0.125,-0.39453 -0.01172,-0.82812 -0.33594,-1.08594c-0.32422,-0.25391 -0.77734,-0.28516 -1.13281,-0.07031c-1.70703,1.01172 -3.59766,1.72266 -5.59375,2.15625c-1.9375,-1.8125 -4.48828,-3.03125 -7.34375,-3.03125zM34.21875,7.46875c2.55078,0 4.85547,1.08984 6.46875,2.8125c0.24219,0.25 0.59766,0.35547 0.9375,0.28125c1.30469,-0.25781 2.54297,-0.63672 3.75,-1.125c-0.69531,0.9375 -1.55469,1.73828 -2.5625,2.34375c-0.45703,0.22266 -0.67187,0.75 -0.50391,1.23047c0.16406,0.47656 0.66406,0.75391 1.16016,0.64453c1,-0.12109 1.89063,-0.52734 2.84375,-0.78125c-0.85547,0.92578 -1.79297,1.76172 -2.8125,2.5c-0.27734,0.20313 -0.42969,0.53125 -0.40625,0.875c0.01563,0.40625 0.03125,0.80859 0.03125,1.21875c0,6.25 -2.39844,13.03516 -6.96875,18.21875c-4.57031,5.18359 -11.28125,8.8125 -20.0625,8.8125c-3.98828,0 -7.75391,-0.88281 -11.15625,-2.4375c4.21875,-0.32422 8.10938,-1.81641 11.25,-4.28125c0.32813,-0.26172 0.45703,-0.69922 0.32422,-1.09766c-0.13281,-0.39844 -0.5,-0.67187 -0.91797,-0.68359c-3.29687,-0.05859 -6.05859,-1.97656 -7.53125,-4.6875c0.05469,0 0.10156,0 0.15625,0c0.98828,0 1.96484,-0.125 2.875,-0.375c0.4375,-0.12891 0.73828,-0.53516 0.72266,-0.99219c-0.01562,-0.45703 -0.33984,-0.84766 -0.78516,-0.94531c-3.55859,-0.71875 -6.22656,-3.61719 -6.84375,-7.21875c1.00781,0.34766 2.03906,0.62109 3.15625,0.65625c0.45703,0.02734 0.87109,-0.25781 1.01172,-0.69141c0.14063,-0.43359 -0.03125,-0.91016 -0.41797,-1.15234c-2.375,-1.58984 -3.9375,-4.29687 -3.9375,-7.375c0,-1.14062 0.29688,-2.1875 0.6875,-3.1875c5,5.48828 12,9.13281 19.90625,9.53125c0.3125,0.01563 0.61719,-0.11328 0.82031,-0.35156c0.20313,-0.24219 0.28125,-0.5625 0.21094,-0.86719c-0.15234,-0.64844 -0.25,-1.33594 -0.25,-2.03125c0,-4.89844 3.94531,-8.84375 8.84375,-8.84375z">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="group h-auto w-auto p-2 rounded-2xl bg-[#242424] hover:bg-gray-400 "><svg
+                                    xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30"
+                                    viewBox="0,0,256,256">
+                                    <g fill="#242424" class="group-hover:fill-gray-400" fill-rule="nonzero"
+                                        stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter"
+                                        stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                                        font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                                        style="mix-blend-mode: normal">
+                                        <path d="M0,256v-256h256v256z" id="bgRectangle"></path>
+                                    </g>
+                                    <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1"
+                                        stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
+                                        stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
+                                        font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+                                        <g transform="scale(5.12,5.12)">
+                                            <path
+                                                d="M25,3c-12.13844,0 -22,9.86156 -22,22c0,11.01913 8.12753,20.13835 18.71289,21.72852l1.14844,0.17383v-17.33594h-5.19727v-3.51953h5.19727v-4.67383c0,-2.87808 0.69065,-4.77363 1.83398,-5.96289c1.14334,-1.18926 2.83269,-1.78906 5.18359,-1.78906c1.87981,0 2.61112,0.1139 3.30664,0.19922v2.88086h-2.44727c-1.38858,0 -2.52783,0.77473 -3.11914,1.80664c-0.59131,1.03191 -0.77539,2.264 -0.77539,3.51953v4.01758h6.12305l-0.54492,3.51953h-5.57812v17.36523l1.13477,-0.1543c10.73582,-1.45602 19.02148,-10.64855 19.02148,-21.77539c0,-12.13844 -9.86156,-22 -22,-22zM25,5c11.05756,0 20,8.94244 20,20c0,9.72979 -6.9642,17.7318 -16.15625,19.5332v-12.96875h5.29297l1.16211,-7.51953h-6.45508v-2.01758c0,-1.03747 0.18982,-1.96705 0.50977,-2.52539c0.31994,-0.55834 0.62835,-0.80078 1.38477,-0.80078h4.44727v-6.69141l-0.86719,-0.11719c-0.59979,-0.08116 -1.96916,-0.27148 -4.43945,-0.27148c-2.7031,0 -5.02334,0.73635 -6.625,2.40234c-1.60166,1.66599 -2.39258,4.14669 -2.39258,7.34961v2.67383h-5.19727v7.51953h5.19727v12.9043c-9.04433,-1.91589 -15.86133,-9.84626 -15.86133,-19.4707c0,-11.05756 8.94244,-20 20,-20z">
+                                            </path>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="w-[72vw] mx-auto">
+                    <div class="w-full h-7"></div>
+                    <div class="h-24 w-full ">
+                        <span class="text-gray-500 hover:text-white cursor-pointer mt-4 mx-3">Legal</span>
+                        <span class="text-gray-500 hover:text-white cursor-pointer mt-4 mx-3">Privacy Center</span>
+                        <span class="text-gray-500 hover:text-white cursor-pointer mt-4 mx-3">Privacy Policy</span>
+                        <span class="text-gray-500 hover:text-white cursor-pointer mt-4 mx-3">Cookies</span>
+                        <span class="text-gray-500 hover:text-white cursor-pointer mt-4 mx-3">About Ads</span>
+                        <span class="text-gray-500 hover:text-white cursor-pointer mt-4 mx-3">Accessibility</span>
+                        <span class="text-gray-500 mt-4 ml-96">© 2024 Spotify Clone</span>
+                    </div>
+                </div>
+                <!--Footer Endss-->
+            </div>
+            <!--Search Window Ends-->
+            <!--Main Spotify Content Ends-->
+        </div>
+        <!--Song Player Starts-->
+        <div class="w-full bg-black h-24 my-2 flex items-center justify-between ">
+            <!--Song Name,Image And Artist Name in Player Starts-->
+            <div class="h-20 w-64 mx-4 flex items-center justify-between">
+                <div class="h-16 w-16 mx-2">
+                    <img src="./img/black.jpg" alt="img" class="playerSongImg h-16 w-16">
+                </div>
+                <div class="h-16 w-40 mx-2 flex flex-col justify-center">
+                    <span class="playerSongName text-white"></span>
+                    <span class="playerArtistName text-gray-700"></span>
+                </div>
+            </div>
+            <!--Song Name,Image And Artist Name in Player Ends-->
+            <!--Main Song Player and Controls starts-->
+            <div class="h-20 w-[30vw] mx-4">
+                <audio src="" id="song">
+                </audio>
+                <div class="h-6 w-auto flex justify-center items-center mt-2 gap-20">
+                    <div><i class="fa-sharp fa-solid fa-backward-step fa-xl" style="color: #ffffff;"></i></div>
+                    <div onclick="playPause()" class="h-7 w-10 rounded-full bg-white flex justify-center items-center"><i class="fa-sharp fa-solid fa-play fa-xl" style="color: black;" id="control"></i></div>
+                    <div><i class="fa-sharp fa-solid fa-forward-step fa-xl" style="color: #ffffff;"></i></div>
+                </div>
+                <div class="mt-2">
+                <input type="range" disabled value="0" class="range w-[90%] h-1 bg-gray-600 rounded cursor-pointer mx-[5%]">
+                </div>
+            </div>
+            <!--Main Song Player and Controls Ends-->
+            <!--Volume and Play on Spotify Starts-->
+            <div class="h-20 w-64 mx-4">
+                <div class="h-8 w-full flex justify-evenly items-center">
+                    <div class="h-6 w-6 cursor-pointer">
+                        <i class="volume fa-solid fa-volume-high fa-lg" style="color: #ffffff;"></i>
+                    </div>
+                    <input type="range" disabled id="volumeControl" min="0" max="1" step="0.01" value="1" onchange="updateVolume()" class="w-[70%] h-1 bg-gray-600 rounded cursor-pointer">
+                </div>
+                <div class="fullSong h-10 w-auto hidden" ><a href="" target="_blank" class="spotifyLink flex gap-2 justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" height=30" width="30" viewBox="-33.4974 -55.829 290.3108 334.974"><path d="M177.707 98.987c-35.992-21.375-95.36-23.34-129.719-12.912-5.519 1.674-11.353-1.44-13.024-6.958-1.672-5.521 1.439-11.352 6.96-13.029 39.443-11.972 105.008-9.66 146.443 14.936 4.964 2.947 6.59 9.356 3.649 14.31-2.944 4.963-9.359 6.6-14.31 3.653m-1.178 31.658c-2.525 4.098-7.883 5.383-11.975 2.867-30.005-18.444-75.762-23.788-111.262-13.012-4.603 1.39-9.466-1.204-10.864-5.8a8.717 8.717 0 015.805-10.856c40.553-12.307 90.968-6.347 125.432 14.833 4.092 2.52 5.38 7.88 2.864 11.968m-13.663 30.404a6.954 6.954 0 01-9.569 2.316c-26.22-16.025-59.223-19.644-98.09-10.766a6.955 6.955 0 01-8.331-5.232 6.95 6.95 0 015.233-8.334c42.533-9.722 79.017-5.538 108.448 12.446a6.96 6.96 0 012.31 9.57M111.656 0C49.992 0 0 49.99 0 111.656c0 61.672 49.992 111.66 111.657 111.66 61.668 0 111.659-49.988 111.659-111.66C223.316 49.991 173.326 0 111.657 0" fill="white"/></svg>
+                    <span class="flex justify-center items-center text-green-600 font-bold">Play Full Song on Spotify</span>
+                </a></div>
+            </div>
+            <!--Volume and Play on Spotify Ends-->
+        </div>
+        <!--Song Player Ends-->
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

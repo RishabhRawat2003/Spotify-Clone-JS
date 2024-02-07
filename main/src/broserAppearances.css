@@ -1,0 +1,17 @@
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 4px;
+  }
+.range{
+  -webkit-appearance:none;
+}
+.range::-webkit-slider-thumb{
+  -webkit-appearance:none;
+  background: white;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+}
