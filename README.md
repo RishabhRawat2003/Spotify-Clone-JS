@@ -1,5 +1,5 @@
 <h1>Spotify Clone (Spotify Web API Used) </h1>
-Helloo Everyone, In this Prject I have Made a Spotify Clone by Using Spotify Web API.
+Helloo Everyone, In this Project I have Made a Spotify Clone by Using Spotify Web API.
 <br>
 In this Project Everything is Coming From API.
 <br>
