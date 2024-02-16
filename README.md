@@ -6,7 +6,8 @@ In this Project Everything is Coming From API.
 If you Play Any Song It Will Play Only For 30 Seconds Beacuse Spotify Web API Provide preview_url(means only 30 seconds from songs) for Songs.
 <br>
 If You Want to Play a Full Song You Have to Buy a Premium of Spotify than Only You Will Get Full Songs from API.
-
+<br>
+This project is not Responsive so please open it only on Laptop/pc/or bigger screens Only.
 Note: To get Client ID and Client Secret (in js file line number 4 and 5)
 <br>
 Visit This Site and Read Getting Started ->
