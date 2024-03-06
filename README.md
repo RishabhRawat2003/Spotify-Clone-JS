@@ -13,6 +13,10 @@ Note: To get Client ID and Client Secret (in js file line number 4 and 5)
 Visit This Site and Read Getting Started ->
 <a href="https://developer.spotify.com/documentation/web-api ">Click here</a>
 
+<h1>Demo Video 1:</h1>
+https://twitter.com/simpleman2003/status/1755253078910292302
+<h1>Demo Video 2:</h1>
+https://twitter.com/simpleman2003/status/1755253241426985017
 
 
 <h2>Which Functionality Works</h2>
